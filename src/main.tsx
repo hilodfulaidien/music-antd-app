@@ -7,7 +7,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from './routes/Home'
+import Album from './routes/Album'
+import Artist from './routes/Artist'
 
 const router = createBrowserRouter([
   {
@@ -16,8 +17,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />
-      }
+        element: <Album />
+      },
+      {
+        path: '/artist',
+        element: <Artist />
+      },
     ]
   },
 ]);
