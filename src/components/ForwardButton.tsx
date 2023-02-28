@@ -1,14 +1,14 @@
 import { Button, Tooltip } from "antd";
-import { CloseIcon } from "../utils/Icons";
+import { RightIcon } from "../utils/Icons";
 
-export default function CloseButton() {
+export default function ForwardButton() {
 
-    const title = 'close';
+    const title = 'forward';
     const delay = 1;
-    
+
     return (
         <Tooltip title={title} arrow={false} mouseEnterDelay={delay}>
-            <Button type="text" icon={CloseIcon} />
+            <Button type="text" icon={RightIcon} />
         </Tooltip>
     )
 }

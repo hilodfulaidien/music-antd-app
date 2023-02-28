@@ -25,7 +25,7 @@ export default function MaximizeButton() {
 
         return (
             <Tooltip title={title} arrow={false} mouseEnterDelay={delay}>
-                <Button icon={icon} onClick={() => { handleOnClick() }} />
+                <Button type="text" icon={icon} onClick={() => { handleOnClick() }} />
             </Tooltip>
         )
     }
