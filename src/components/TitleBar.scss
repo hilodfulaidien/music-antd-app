@@ -1,0 +1,13 @@
+.my-title-bar {
+    height: 100%;
+    background: hsl(0, 0%, 15%);
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+
+    .my-left-block {
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+    }
+}

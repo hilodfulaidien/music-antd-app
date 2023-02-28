@@ -1,0 +1,34 @@
+#root,
+html,
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  .ant-btn {
+    color: white;
+  }
+
+  .ant-dropdown .ant-dropdown-menu {
+    background-color: hsl(0, 0%, 10%);
+
+    .ant-dropdown-menu-item {
+      color: white;
+
+      .anticon {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .anticon {
+    font-size: 16px;
+  }
+}

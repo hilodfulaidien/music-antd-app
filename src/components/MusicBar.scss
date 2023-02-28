@@ -1,0 +1,65 @@
+.my-music-bar {
+    display: block;
+    width: 100%;
+    background: hsl(0, 0%, 15%);
+
+    .my-row-1 {
+        .ant-slider {
+            margin: 0px;
+        }
+    }
+
+    .my-row-2 {
+        display: inline-flex;
+        width: 100%;
+        white-space: nowrap;
+        justify-content: space-between;
+
+        .my-left-block {
+            display: flex;
+            //white-space: nowrap;
+            align-items: center;
+
+
+        }
+
+        .my-center-block {
+            display: flex;
+            white-space: nowrap;
+            align-items: center;
+
+            >* {
+                margin: 0px 8px;
+            }
+        }
+
+        .my-right-block {
+            display: inline-flex;
+            white-space: nowrap;
+            align-items: center;
+
+            >* {
+                margin: 0px 8px;
+            }
+        }
+
+    }
+
+    .my-thumbnail {
+        width: 60px;
+        height: 60px;
+
+    }
+
+    .my-volume-btn-and-slider {
+        display: inline-flex;
+
+        .ant-slider {
+            width: 100px;
+        }
+    }
+
+
+
+
+}
