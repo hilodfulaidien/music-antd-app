@@ -23,6 +23,10 @@ const router = createBrowserRouter([
         path: '/artist',
         element: <Artist />
       },
+      {
+        path: '/playlist',
+        element: <Artist />
+      },
     ]
   },
 ]);
