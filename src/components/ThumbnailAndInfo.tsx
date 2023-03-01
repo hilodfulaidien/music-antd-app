@@ -7,8 +7,8 @@ export default function ThumbnailAndInfo() {
         <div className="my-thumbnail-and-info">
             <Image className="my-thumbnail" src={imageDefault} />
             <div>
-                <div>album name</div>
-                <div>artist</div>
+                <a>track name</a><br/>
+                <a>track artist</a>
             </div>
 
         </div>

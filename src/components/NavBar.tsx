@@ -5,11 +5,11 @@ import { AlbumIcon, HomeIcon, PlayListIcon, UserIcon } from "../utils/Icons";
 type MenuItem = Required<MenuProps>['items'][number];
 
 const items: MenuItem[] = [
-    {
-        key: '1',
-        icon: HomeIcon,
-        label: 'Home'
-    },
+    // {
+    //     key: '1',
+    //     icon: HomeIcon,
+    //     label: 'Home'
+    // },
     {
         key: '2',
         icon: AlbumIcon,

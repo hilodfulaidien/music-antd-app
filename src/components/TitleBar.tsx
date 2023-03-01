@@ -4,6 +4,7 @@ import ForwardButton from './ForwardButton'
 import MaximizeButton from './MaximizeButton'
 import MenuButton from './MenuButton'
 import MinimizeButton from './MinimizeButton'
+import SearchInput from './SearchInput'
 import './TitleBar.scss'
 
 export default function TitleBar() {
@@ -12,6 +13,7 @@ export default function TitleBar() {
             <div className='my-right-block'>
                 <BackwardButton />
                 <ForwardButton />
+                <SearchInput/>
             </div>
 
             <div className='my-left-block'>

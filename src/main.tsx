@@ -10,6 +10,8 @@ import {
 import Album from './routes/Album'
 import Artist from './routes/Artist'
 
+const { darkAlgorithm, compactAlgorithm } = theme;
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,16 +33,17 @@ const router = createBrowserRouter([
   },
 ]);
 
-const darkTheme = {
+const myTheme = {
+  algorithm: [darkAlgorithm],
   token: {
-    algorithm: theme.darkAlgorithm,
+
     colorPrimary: "#13C2C2",
   },
 };
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ConfigProvider theme={darkTheme}>
+    <ConfigProvider theme={myTheme}>
       <RouterProvider router={router} />
     </ConfigProvider>
   </React.StrictMode>,
