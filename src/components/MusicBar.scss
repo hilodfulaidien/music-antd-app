@@ -10,7 +10,7 @@
     }
 
     .my-row-2 {
-        display: inline-flex;
+        display: flex;
         width: 100%;
         white-space: nowrap;
         justify-content: space-between;
@@ -34,7 +34,7 @@
         }
 
         .my-right-block {
-            display: inline-flex;
+            display: flex;
             white-space: nowrap;
             align-items: center;
 
@@ -52,7 +52,7 @@
     }
 
     .my-volume-btn-and-slider {
-        display: inline-flex;
+        display: flex;
 
         .ant-slider {
             width: 100px;

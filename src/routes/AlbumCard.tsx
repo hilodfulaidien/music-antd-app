@@ -8,7 +8,7 @@ import './AlbumCard.scss'
 
 export default function AlbumCard() {
 
-    const albumName = 'name';
+    const albumName = <a>album nsddddddddddddddddddddddddddddddame</a>;
     const albumArtists = [
         <a>artist 1</a>,
         <a>artist 2</a>,
@@ -17,10 +17,15 @@ export default function AlbumCard() {
     return (
         <Card className="my-album-card">
             <Image src={imageDefault} preview={false} />
+
             <div className="my-album-card-info">
-                <a>{albumName}</a>
-                <br />
-                {albumArtists}
+                <div className="my-album-card-info-name">
+                    {albumName}
+                </div>
+
+                <div className="my-album-card-info-artists">
+                    {albumArtists}
+                </div>
             </div>
         </Card>
     )

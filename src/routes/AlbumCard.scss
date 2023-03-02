@@ -4,7 +4,7 @@
 
     .ant-card-body {
         padding: 0px;
-        display: inline-flex;
+        //display: inline;
         white-space: nowrap;
         font-size: 14px;
 
@@ -13,8 +13,24 @@
             border-radius: 8px;
         }
 
-        .my-album-card-info{
+        .my-album-card-info {
             padding: 8px;
+            display: inline-flex;
+            height: 100%;
+            flex-wrap: wrap;
+            align-content: space-around;
+            //vertical-align: middle;
+
+
+            .my-album-card-info-name {
+                display: flex;
+                width: 100%;
+            }
+
+            .my-album-card-info-artists {
+                display: flex;
+                width: 100%;
+            }
         }
     }
 }
