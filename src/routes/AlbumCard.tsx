@@ -8,10 +8,10 @@ import './AlbumCard.scss'
 
 export default function AlbumCard() {
 
-    const albumName = <a>album nsddddddddddddddddddddddddddddddame</a>;
+    const albumName = 'album nsdddsdsdqwewqrqwrqrqsdsddddde';
     const albumArtists = [
-        <a>artist 1</a>,
-        <a>artist 2</a>,
+        'artist 1',
+        'artist 2',
     ];
 
     return (
@@ -20,11 +20,17 @@ export default function AlbumCard() {
 
             <div className="my-album-card-info">
                 <div className="my-album-card-info-name">
-                    {albumName}
+                    <a title={albumName}>{albumName}</a>
                 </div>
 
                 <div className="my-album-card-info-artists">
-                    {albumArtists}
+                    {albumArtists.map((value, index) => {
+                        if (index > 0) {
+                            return <><span> / </span><a key={index}>{value}</a></>
+                        } else {
+                            return <a key={index}>{value}</a>
+                        }
+                    })}
                 </div>
             </div>
         </Card>

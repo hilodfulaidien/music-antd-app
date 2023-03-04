@@ -4,32 +4,35 @@
 
     .ant-card-body {
         padding: 0px;
-        //display: inline;
+        display: flex;
         white-space: nowrap;
         font-size: 14px;
 
-        .ant-image {
+        .ant-image .ant-image-img {
             width: 80px;
             border-radius: 8px;
         }
 
         .my-album-card-info {
             padding: 8px;
-            display: inline-flex;
-            height: 100%;
+            height: 78px;
+            width: 199px;
+            display: flex;
             flex-wrap: wrap;
             align-content: space-around;
-            //vertical-align: middle;
-
 
             .my-album-card-info-name {
-                display: flex;
-                width: 100%;
+                overflow: hidden;
+
             }
 
             .my-album-card-info-artists {
-                display: flex;
-                width: 100%;
+                overflow: hidden;
+
+            }
+
+            a {
+                color: white;
             }
         }
     }
