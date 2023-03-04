@@ -1,22 +1,18 @@
 import { Card } from "antd";
 import Image from "antd/es/image";
-import imageDefault from '../assets/images/ironman.jpg'
-
 import './AlbumCard.scss'
 
+export interface AlbumCardProps {
+    thumbnailUrl: string,
+    albumName: string,
+    albumArtists: string[]
+}
 
-
-export default function AlbumCard() {
-
-    const albumName = 'album nsdddsdsdqwewqrqwrqrqsdsddddde';
-    const albumArtists = [
-        'artist 1',
-        'artist 2',
-    ];
+export default function AlbumCard({ thumbnailUrl, albumName, albumArtists }: AlbumCardProps) {
 
     return (
         <Card className="my-album-card">
-            <Image src={imageDefault} preview={false} />
+            <Image src={thumbnailUrl} preview={false} />
 
             <div className="my-album-card-info">
                 <div className="my-album-card-info-name">
