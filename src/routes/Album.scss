@@ -1,4 +1,48 @@
-.my-album{
+.my-album {
     background: hsl(0, 0%, 5%);
     height: 100%;
+
+    // -----------------------------------
+    .my-list-card-item {
+
+        .ant-card {
+            width: 160px;
+            height: 220px;
+            border-radius: 0px;
+            
+
+            .ant-card-cover img {
+                border-radius: 0px;
+            }
+
+            .ant-card-body {
+                padding: 8px;
+
+                .ant-card-meta-title {
+                    margin: 0px;
+                    font-size: 14px;
+                }
+
+                .ant-card-meta-description {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+
+    // ----------------------------------------
+    .my-list-normal-item {
+        height: 80px;
+
+        .ant-list-item-meta-avatar {
+            width: 100%;
+            height: 100%;
+            //box-sizing: content-box;
+        }
+    }
+
+
+
 }
