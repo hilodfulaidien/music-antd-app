@@ -16,7 +16,7 @@ export default function Album() {
 
     return (
         <div className='my-album'>
-            <Row>
+            <Row gutter={8}>
                 {makeItems()}
             </Row>
         </div>
@@ -29,15 +29,8 @@ const albums: AlbumCardProps[] = [
         albumName: 'album 1 nsdddsdsdqwewqrqwrqrqsdsddddde',
         albumArtists: [
             'artist 1',
-            'artist 2',
+            'artist 2 sdddddddddddddddd',
         ]
     },
-    {
-        thumbnailUrl: imageDefault,
-        albumName: 'album 2 nsdddsdsdqwewqrqwrqrqsdsddddde',
-        albumArtists: [
-            'artist 1',
-            'artist 2',
-        ]
-    },
+
 ]

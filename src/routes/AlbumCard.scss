@@ -1,39 +1,32 @@
-.my-album-card {
-    width: 280px;
-    height: 80px;
+.my-album-card.ant-card {
+    width: 160px;
+    height: 220px;
+    border-radius: 0px;
 
-    .ant-card-body {
-        padding: 0px;
-        display: flex;
-        white-space: nowrap;
-        font-size: 14px;
+    .ant-card-cover {
+        margin: 0px;
+        margin-inline: 0px;
 
-        .ant-image .ant-image-img {
-            width: 80px;
-            border-radius: 8px;
-        }
-
-        .my-album-card-info {
-            padding: 8px;
-            height: 78px;
-            width: 199px;
-            display: flex;
-            flex-wrap: wrap;
-            align-content: space-around;
-
-            .my-album-card-info-name {
-                overflow: hidden;
-
-            }
-
-            .my-album-card-info-artists {
-                overflow: hidden;
-
-            }
-
-            a {
-                color: white;
-            }
+        img {
+            border-radius: 0px;
         }
     }
+
+
+    .ant-card-body {
+        padding: 6px;
+        white-space: nowrap;
+
+        .my-album-card-name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+        }
+
+        .my-album-card-artists {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
 }
