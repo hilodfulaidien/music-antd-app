@@ -10,7 +10,7 @@ export default function MenuButton() {
         {
             key: 'settings',
             label: 'Settings',
-            icon: SettingsIcon,
+            icon: <SettingsIcon />,
 
         },
 
@@ -18,9 +18,7 @@ export default function MenuButton() {
 
     return (
         <Dropdown menu={{ items }} trigger={['click']} placement='topCenter'>
-            <Tooltip title={title} arrow={false} mouseEnterDelay={delay}>
-                <Button type="text" icon={MenuIcon} />
-            </Tooltip>
+            <Button title={title} type="text" icon={<MenuIcon />} />
         </Dropdown >
     )
 }

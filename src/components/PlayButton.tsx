@@ -17,10 +17,10 @@ export default function PlayButton() {
         let icon;
         if (!isPlayed) {
             title = 'play';
-            icon = PlayIcon;
+            icon = <PlayIcon />;
         } else {
             title = 'pause';
-            icon = PauseIcon;
+            icon = <PauseIcon />;
         }
         return (
             <Tooltip title={title} arrow={false} mouseEnterDelay={delay}>

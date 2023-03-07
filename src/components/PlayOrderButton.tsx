@@ -13,25 +13,25 @@ export default function PlayOrderButton() {
         {
             key: 'sequence',
             label: 'Sequence',
-            icon: OrderedListIcon,
+            icon: <OrderedListIcon />,
             onClick: () => setOrder('sequence')
         },
         {
             key: 'loop',
             label: 'Loop',
-            icon: LoopIcon,
+            icon: <LoopIcon />,
             onClick: () => setOrder('loop')
         },
         {
             key: 'loop one',
             label: 'Loop One',
-            icon: LoopOneIcon,
+            icon: <LoopOneIcon />,
             onClick: () => setOrder('loop one')
         },
         {
             key: 'shuffle',
             label: 'Shuffle',
-            icon: ShuffleIcon,
+            icon: <ShuffleIcon />,
             onClick: () => setOrder('shuffle')
         },
     ];
@@ -41,16 +41,16 @@ export default function PlayOrderButton() {
         let icon;
         if (order == 'sequence') {
             title = 'sequence';
-            icon = OrderedListIcon;
+            icon = <OrderedListIcon />;
         } else if (order == 'loop') {
             title = 'loop';
-            icon = LoopIcon;
+            icon = <LoopIcon />;
         } else if (order == 'loop one') {
             title = 'loop one';
-            icon = LoopOneIcon;
+            icon = <LoopOneIcon />;
         } else {
             title = 'shuffle';
-            icon = ShuffleIcon;
+            icon = <ShuffleIcon />;
         }
 
         return (

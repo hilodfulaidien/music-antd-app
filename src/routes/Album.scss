@@ -1,26 +1,29 @@
 .my-album {
-    background: hsl(0, 0%, 5%);
     height: 100%;
+
+    .my-album-toolbar{
+        height: 48px;
+        background: white;
+    }
 
     // -----------------------------------
     .my-list-card-item {
 
         .ant-card {
-            width: 160px;
-            height: 220px;
+            width: 150px;
             border-radius: 0px;
-            
 
             .ant-card-cover img {
                 border-radius: 0px;
             }
 
             .ant-card-body {
-                padding: 8px;
+                padding: 8px 6px 6px 6px;
 
                 .ant-card-meta-title {
                     margin: 0px;
                     font-size: 14px;
+                    font-weight: 600;
                 }
 
                 .ant-card-meta-description {

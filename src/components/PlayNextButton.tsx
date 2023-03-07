@@ -8,7 +8,7 @@ export default function PlayNextButton() {
     function makeButton() {
         return (
             <Tooltip title='play previous' arrow={false} mouseEnterDelay={delay}>
-                <Button type="text" icon={PlayNextIcon} />
+                <Button type="text" icon={<PlayNextIcon/>} />
             </Tooltip>
         )
     }

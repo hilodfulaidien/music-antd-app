@@ -1,36 +1,18 @@
 .my-app {
+    display: flex;
     height: 100%;
+    flex-flow: column;
+    
 
+    .my-layout-content{
+        background: hsl(193, 100%, 75%);
+        flex-grow: 1;
+    }
 
-    .ant-layout {
-        height: 100%;
-
-        .ant-layout-header {
-            background: rgb(29, 206, 255);
-            padding: 0px;
-            // 48px can place adress-input
-            height: 48px;
-            line-height: 48px;
-
-        }
-
-        .ant-layout-sider {
-            background: hsl(203, 91%, 61%);
-        }
-
-        .ant-layout-footer {
-            background: hsl(193, 100%, 66%);
-            padding: 0px;
-            height: 72px;
-        }
-
-        .ant-layout-content {
-            background: hsl(193, 100%, 75%);
-
-            >* {
-                padding: 16px 16px 0px 16px;
-            }
-        }
+    .my-layout-footer{
+        background: hsl(193, 100%, 66%);
+        height: 72px;
+        
     }
 
 }

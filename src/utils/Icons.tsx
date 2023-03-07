@@ -1,4 +1,5 @@
 import Icon from '@ant-design/icons';
+import type { CustomIconComponentProps } from '@ant-design/icons/lib/components/Icon';
 import { ReactComponent as HomeSvg } from '../assets/icons/home.svg'
 import { ReactComponent as AlbumSvg } from '../assets/icons/album.svg'
 import { ReactComponent as GridViewSvg } from '../assets/icons/grid-view.svg'
@@ -7,11 +8,9 @@ import { ReactComponent as ArrowLeftSmallSvg } from '../assets/icons/arrow-left-
 import { ReactComponent as ArrowRightSmallSvg } from '../assets/icons/arrow-right-small.svg'
 import { ReactComponent as HelpSvg } from '../assets/icons/help.svg'
 import { ReactComponent as FolderOpenSvg } from '../assets/icons/folder-open.svg'
-//import { ReactComponent as HistorySvg } from '../assets/icons/history.svg'
 import { ReactComponent as InfoSvg } from '../assets/icons/info.svg'
 import { ReactComponent as LeftSvg } from '../assets/icons/left.svg'
 import { ReactComponent as ListViewSvg } from '../assets/icons/list-view.svg'
-//import { ReactComponent as LogoutSvg } from '../assets/icons/logout.svg'
 import { ReactComponent as LoopOneSvg } from '../assets/icons/loop-one.svg'
 import { ReactComponent as LoopSvg } from '../assets/icons/loop.svg'
 import { ReactComponent as MaximizeSvg } from '../assets/icons/maximize.svg'
@@ -39,42 +38,114 @@ import { ReactComponent as OrderedListSvg } from '../assets/icons/ordered-list.s
 import { ReactComponent as ShuffleSvg } from '../assets/icons/shuffle.svg'
 import { ReactComponent as CloseSvg } from '../assets/icons/close.svg'
 
-export const CloseIcon = <Icon component={CloseSvg} />
-export const ShuffleIcon = <Icon component={ShuffleSvg} />
-export const OrderedListIcon = <Icon component={OrderedListSvg} />
-export const VolumeMuteIcon = <Icon component={VolumeMuteSvg} />
-export const VolumeSmallIcon = <Icon component={VolumeSmallSvg} />
-export const VolumeMaxIcon = <Icon component={VolumeMaxSvg} />
-export const UserIcon = <Icon component={UserSvg} />
-export const UnmaximizeIcon = <Icon component={UnmaximizeSvg} />
-export const SettingsIcon = <Icon component={SettingsSvg} />
-export const RightIcon = <Icon component={RightSvg} />
-export const RefreshIcon = <Icon component={RefreshSvg} />
-export const PowerIcon = <Icon component={PowerSvg} />
-export const PlusIcon = <Icon component={PlusSvg} />
-export const PlayIcon = <Icon component={PlaySvg} />
-export const PlayQueueIcon = <Icon component={PlayQueueSvg} />
-export const PlayPreviousIcon = <Icon component={PlayPreviousSvg} />
-export const PlayNextIcon = <Icon component={PlayNextSvg} />
-export const PlayListIcon = <Icon component={PlayListSvg} />
-export const PauseIcon = <Icon component={PauseSvg} />
-export const MaximizeIcon = <Icon component={MaximizeSvg} />
-export const MusicOneIcon = <Icon component={MusicOneSvg} />
-export const MusicIcon = <Icon component={MusicSvg} />
-export const MinimizeIcon = <Icon component={MinimizeSvg} />
-export const MenuIcon = <Icon component={MenuSvg} />
-export const LoopIcon = <Icon component={LoopSvg} />
-export const LoopOneIcon = <Icon component={LoopOneSvg} />
-//export const LogoutIcon = <Icon component={LogoutSvg} />
-export const ListViewIcon = <Icon component={ListViewSvg} />
-export const LeftIcon = <Icon component={LeftSvg} />
-export const InfoIcon = <Icon component={InfoSvg} />
-//export const HistoryIcon = <Icon component={HistorySvg} />
-export const FolderOpenIcon = <Icon component={FolderOpenSvg} />
-export const HelpIcon = <Icon component={HelpSvg} />
-export const HomeIcon = <Icon component={HomeSvg} />
-export const AlbumIcon = <Icon component={AlbumSvg} />
-export const GridViewIcon = <Icon component={GridViewSvg} />
-export const AvatarIcon = <Icon component={AvatarSvg} />
-export const ArrowLeftSmallIcon = <Icon component={ArrowLeftSmallSvg} />
-export const ArrowRightSmallIcon = <Icon component={ArrowRightSmallSvg} />
+export const CloseIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={CloseSvg} {...props} />
+);
+export const ShuffleIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={ShuffleSvg} {...props} />
+);
+export const OrderedListIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={OrderedListSvg} {...props} />
+);
+export const VolumeMuteIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={VolumeMuteSvg} {...props} />
+);
+export const VolumeSmallIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={VolumeSmallSvg} {...props} />
+);
+export const VolumeMaxIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={VolumeMaxSvg} {...props} />
+);
+export const UserIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={UserSvg} {...props} />
+);
+export const UnmaximizeIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={UnmaximizeSvg} {...props} />
+);
+export const SettingsIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={SettingsSvg} {...props} />
+);
+export const RightIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={RightSvg} {...props} />
+);
+export const RefreshIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={RefreshSvg} {...props} />
+);
+export const PowerIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={PowerSvg} {...props} />
+);
+export const PlusIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={PlusSvg} {...props} />
+);
+export const PlayIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={PlaySvg} {...props} />
+);
+export const PlayQueueIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={PlayQueueSvg} {...props} />
+);
+export const PlayPreviousIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={PlayPreviousSvg} {...props} />
+);
+export const PlayNextIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={PlayNextSvg} {...props} />
+);
+export const PlayListIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={PlayListSvg} {...props} />
+);
+export const PauseIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={PauseSvg} {...props} />
+);
+export const MaximizeIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={MaximizeSvg} {...props} />
+);
+export const MusicOneIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={MusicOneSvg} {...props} />
+);
+export const MusicIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={MusicSvg} {...props} />
+);
+export const MinimizeIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={MinimizeSvg} {...props} />
+);
+export const MenuIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={MenuSvg} {...props} />
+);
+export const LoopIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={LoopSvg} {...props} />
+);
+export const LoopOneIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={LoopOneSvg} {...props} />
+);
+export const ListViewIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={ListViewSvg} {...props} />
+);
+export const LeftIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={LeftSvg} {...props} />
+);
+export const InfoIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={InfoSvg} {...props} />
+);
+export const FolderOpenIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={FolderOpenSvg} {...props} />
+);
+export const HelpIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={HelpSvg} {...props} />
+);
+export const HomeIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={HomeSvg} {...props} />
+);
+export const AlbumIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={AlbumSvg} {...props} />
+);
+export const GridViewIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={GridViewSvg} {...props} />
+);
+export const AvatarIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={AvatarSvg} {...props} />
+);
+export const ArrowLeftSmallIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={ArrowLeftSmallSvg} {...props} />
+);
+export const ArrowRightSmallIcon = (props: Partial<CustomIconComponentProps>) => (
+    <Icon component={ArrowRightSmallSvg} {...props} />
+);

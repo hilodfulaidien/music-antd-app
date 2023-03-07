@@ -50,9 +50,9 @@ export default function Album() {
 
     return (
         <div className='my-album'>
-            {/* <div className='my-album-toolbar'>
+            <div className='my-album-toolbar'>
 
-            </div> */}
+            </div>
             <List grid={{gutter:16,}} dataSource={albums} renderItem={(item) => makeCardItem(item)} />
             {/* <List dataSource={albums} renderItem={(item) => makeNormalItem(item)} /> */}
         </div>
@@ -74,7 +74,7 @@ const albums: AlbumCardProps[] = [
         albumName: 'album 1 nsdddsdsdqwewqrqwrqrqsdsddddde',
         albumArtists: [
             'artist 1',
-            'artist 2 sdddddddddddddddd',
+           
         ]
     },
     {

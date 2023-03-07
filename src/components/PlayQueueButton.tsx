@@ -9,7 +9,7 @@ export default function PlayQueueButton() {
         return (
             <Popover>
                 <Tooltip title='play queue' arrow={false} mouseEnterDelay={delay}>
-                    <Button type="text" icon={PlayQueueIcon} />
+                    <Button type="text" icon={<PlayQueueIcon/>} />
                 </Tooltip>
             </Popover>
         )

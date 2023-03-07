@@ -29,11 +29,11 @@ export default function VolumeButtonAndSlider() {
 
         let icon;
         if (volumeStage == 'max') {
-            icon = VolumeMaxIcon;
+            icon = <VolumeMaxIcon/>;
         } else if (volumeStage == 'small') {
-            icon = VolumeSmallIcon;
+            icon = <VolumeSmallIcon/>;
         } else {
-            icon = VolumeMuteIcon;
+            icon = <VolumeMuteIcon/>;
         }
 
         return (
