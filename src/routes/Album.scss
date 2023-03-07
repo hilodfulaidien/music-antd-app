@@ -1,8 +1,8 @@
 .my-album {
     height: 100%;
 
-    .my-album-toolbar{
-        height: 48px;
+    .my-album-toolbar {
+        height: 36px;
         background: white;
     }
 
@@ -36,16 +36,37 @@
     }
 
     // ----------------------------------------
-    .my-list-normal-item {
-        height: 80px;
+    .my-list-normal-item.ant-list-item {
+        padding: 4px 0px;
 
-        .ant-list-item-meta-avatar {
-            width: 100%;
-            height: 100%;
-            //box-sizing: content-box;
+        .ant-list-item-meta {
+            align-items: center;
+
+
+            .ant-list-item-meta-avatar {
+                display: flex;
+
+                img {
+                    height: 56px;
+                }
+            }
+
+            .ant-list-item-meta-title {
+                margin-block-start: 0px;
+                margin-block-end: 0px;
+
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .ant-list-item-meta-description {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
     }
-
 
 
 }

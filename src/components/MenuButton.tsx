@@ -3,7 +3,7 @@ import { MenuIcon, SettingsIcon } from "../utils/Icons";
 
 
 export default function MenuButton() {
-    const title = 'menu';
+    const title = 'Menu';
     const delay = 1;
 
     const items: MenuProps['items'] = [

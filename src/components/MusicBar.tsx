@@ -16,7 +16,7 @@ export default function MusicBar() {
             <div className='my-row-1'>
                 <Slider />
             </div>
-            
+
             <div className='my-row-2'>
                 <div className='my-left-block'>
                     <ThumbnailAndInfo />

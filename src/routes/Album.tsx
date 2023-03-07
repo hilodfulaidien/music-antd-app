@@ -1,6 +1,7 @@
 import './Album.scss'
 import imageDefault from '../assets/images/ironman.jpg'
-import { Card, List, Row } from 'antd'
+import { Card, List } from 'antd'
+import VirtualList from 'rc-virtual-list';
 import Meta from 'antd/es/card/Meta'
 
 export default function Album() {
@@ -19,11 +20,11 @@ export default function Album() {
         });
 
         return (
-            <List.Item className='my-list-card-item'>
+            <List.Item className='my-list-card-item' title={item.albumName + '\n' + artistsString}>
                 <Card cover={<img src={item.thumbnailUrl} />}>
-                    <div title={item.albumName + '\n' + artistsString}>
-                        <Meta title={item.albumName} description={artistsString} />
-                    </div>
+
+                    <Meta title={item.albumName} description={artistsString} />
+
                 </Card>
             </List.Item>
         )
@@ -42,9 +43,9 @@ export default function Album() {
         });
 
         return (
-            <List.Item className='my-list-normal-item'>
+            <List.Item className='my-list-normal-item' title={item.albumName + '\n' + artistsString}>
                 <List.Item.Meta avatar={<img src={item.thumbnailUrl} />} title={item.albumName} description={artistsString} />
-            </List.Item>
+            </List.Item >
         )
     }
 
@@ -53,8 +54,17 @@ export default function Album() {
             <div className='my-album-toolbar'>
 
             </div>
-            <List grid={{gutter:16,}} dataSource={albums} renderItem={(item) => makeCardItem(item)} />
+            {/* <List grid={{ gutter: 16 }} dataSource={albums} renderItem={(item) => makeCardItem(item)} /> */}
             {/* <List dataSource={albums} renderItem={(item) => makeNormalItem(item)} /> */}
+            <List>
+                <VirtualList data={albums} itemKey={'key'}>
+                    {
+                        (item) => (
+                            makeNormalItem(item)
+                        )
+                    }
+                </VirtualList>
+            </List>
         </div>
     )
 }
@@ -71,10 +81,10 @@ type AlbumCardProps = {
 const albums: AlbumCardProps[] = [
     {
         thumbnailUrl: imageDefault,
-        albumName: 'album 1 nsdddsdsdqwewqrqwrqrqsdsddddde',
+        albumName: 'album 1 nsdddsdsdqwewqrqwrqrqsdsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddde',
         albumArtists: [
             'artist 1',
-           
+
         ]
     },
     {

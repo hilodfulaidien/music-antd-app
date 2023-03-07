@@ -4,7 +4,7 @@ import { PauseIcon, PlayIcon } from "../utils/Icons";
 
 export default function PlayButton() {
 
-    const delay = 1;
+
 
     const [isPlayed, setIsPlayed] = useState<boolean>(false);
 
@@ -16,16 +16,16 @@ export default function PlayButton() {
         let title;
         let icon;
         if (!isPlayed) {
-            title = 'play';
+            title = 'Play';
             icon = <PlayIcon />;
         } else {
-            title = 'pause';
+            title = 'Pause';
             icon = <PauseIcon />;
         }
         return (
-            <Tooltip title={title} arrow={false} mouseEnterDelay={delay}>
-                <Button type="text" icon={icon} onClick={() => handleClick()} />
-            </Tooltip>
+
+            <Button title={title} type="text" icon={icon} onClick={() => handleClick()} />
+
         )
     }
 

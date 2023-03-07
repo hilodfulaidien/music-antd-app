@@ -3,12 +3,12 @@ import { MinimizeIcon } from "../utils/Icons";
 
 export default function MinimizeButton() {
 
-    const title = 'minimize';
-    const delay = 1;
+    const title = 'Minimize';
+
 
     return (
-        <Tooltip title={title} arrow={false} mouseEnterDelay={delay}>
-            <Button type='text' icon={MinimizeIcon} />
-        </Tooltip>
+
+        <Button title={title} type='text' icon={<MinimizeIcon />} />
+
     )
 }

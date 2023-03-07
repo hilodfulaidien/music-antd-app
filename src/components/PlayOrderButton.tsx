@@ -6,7 +6,6 @@ type orderType = 'sequence' | 'loop' | 'loop one' | 'shuffle';
 
 export default function PlayOrderButton() {
 
-    const delay = 1;
     const [order, setOrder] = useState<orderType>('sequence');
 
     const items: MenuProps['items'] = [
@@ -40,24 +39,22 @@ export default function PlayOrderButton() {
         let title;
         let icon;
         if (order == 'sequence') {
-            title = 'sequence';
+            title = 'Sequence';
             icon = <OrderedListIcon />;
         } else if (order == 'loop') {
-            title = 'loop';
+            title = 'Loop';
             icon = <LoopIcon />;
         } else if (order == 'loop one') {
-            title = 'loop one';
+            title = 'Loop One';
             icon = <LoopOneIcon />;
         } else {
-            title = 'shuffle';
+            title = 'Shuffle';
             icon = <ShuffleIcon />;
         }
 
         return (
             <Dropdown menu={{ items }} trigger={['click']} placement='topCenter'>
-                <Tooltip title={title} arrow={false} mouseEnterDelay={delay}>
-                    <Button type="text" icon={icon} />
-                </Tooltip>
+                <Button title={title} type="text" icon={icon} />
             </Dropdown>
         )
     }

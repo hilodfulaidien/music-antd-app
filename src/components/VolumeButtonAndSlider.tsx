@@ -29,19 +29,17 @@ export default function VolumeButtonAndSlider() {
 
         let icon;
         if (volumeStage == 'max') {
-            icon = <VolumeMaxIcon/>;
+            icon = <VolumeMaxIcon />;
         } else if (volumeStage == 'small') {
-            icon = <VolumeSmallIcon/>;
+            icon = <VolumeSmallIcon />;
         } else {
-            icon = <VolumeMuteIcon/>;
+            icon = <VolumeMuteIcon />;
         }
 
         return (
             <div className="my-volume-btn-and-slider">
                 <Popover content={slider} trigger={'click'}>
-                    <Tooltip title='volume' arrow={false} mouseEnterDelay={delay} placement='right'>
-                        <Button type="text" icon={icon} />
-                    </Tooltip>
+                    <Button title="Volume" type="text" icon={icon} />
                 </Popover>
             </div>
         )

@@ -1,9 +1,8 @@
-import { Button, Tooltip } from "antd";
+import { Button} from "antd";
 import { useState } from "react";
 import { MaximizeIcon, UnmaximizeIcon } from "../utils/Icons";
 
 export default function MaximizeButton() {
-    const delay = 1;
     const [isMaximized, setIsMaximized] = useState<boolean>(false);
 
     function handleOnClick() {
@@ -15,18 +14,18 @@ export default function MaximizeButton() {
         let icon;
 
         if (!isMaximized) {
-            title = 'maximize'
-            icon = MaximizeIcon
+            title = 'Maximize'
+            icon = <MaximizeIcon />
 
         } else {
-            title = 'unmaximize';
-            icon = UnmaximizeIcon
+            title = 'Unmaximize';
+            icon = <UnmaximizeIcon />
         }
 
         return (
-            <Tooltip title={title} arrow={false} mouseEnterDelay={delay}>
-                <Button type="text" icon={icon} onClick={() => { handleOnClick() }} />
-            </Tooltip>
+
+            <Button title={title} type="text" icon={icon} onClick={() => { handleOnClick() }} />
+
         )
     }
 
