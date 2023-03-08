@@ -3,6 +3,6 @@ import './SearchInput.scss'
 
 export default function SearchInput() {
     return (
-        <Search placeholder="input here" />
+        <Search placeholder="input here" style={{width:300}}/>
     )
 }

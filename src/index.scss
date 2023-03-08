@@ -13,36 +13,37 @@ body {
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
   // -webkit-text-size-adjust: 100%;
+}
 
-  .ant-btn {
-    color: white;
-  }
-
-  .ant-dropdown .ant-dropdown-menu {
-    background-color: hsl(0, 0%, 10%);
-
-    .ant-dropdown-menu-item {
-      color: white;
-
-      .anticon {
-        font-size: 16px;
-      }
-    }
-  }
+.ant-btn {
+  color: white;
 
   .anticon {
     font-size: 16px;
   }
+}
 
-  .ant-popover .ant-popover-inner{
-    //padding: 4px;
-  }
+.ant-dropdown .ant-dropdown-menu {
+  background-color: hsl(0, 0%, 10%);
 
-  .my-volume-slider{
-    height: 100px;
+  .ant-dropdown-menu-item {
+    color: white;
+
+    .anticon {
+      font-size: 16px;
+    }
   }
 }
 
-::-webkit-scrollbar{
+.ant-popover .ant-popover-inner {
+  //padding: 4px;
+}
+
+.my-volume-slider {
+  height: 100px;
+}
+
+
+::-webkit-scrollbar {
   width: 12px;
 }

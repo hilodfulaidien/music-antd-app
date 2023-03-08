@@ -7,8 +7,9 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Album from './routes/AlbumPanel'
-import Artist from './routes/Artist'
+import Artist from './routes/ArtistPanel'
+import AlbumPanel from './routes/AlbumPanel'
+import ArtistPanel from './routes/ArtistPanel'
 
 const { darkAlgorithm, compactAlgorithm } = theme;
 
@@ -19,11 +20,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Album />
+        element: <AlbumPanel />
       },
       {
         path: '/artist',
-        element: <Artist />
+        element: <ArtistPanel />
       },
       {
         path: '/playlist',

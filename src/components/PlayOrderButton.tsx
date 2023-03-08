@@ -39,11 +39,12 @@ export default function PlayOrderButton() {
       key: "shuffle",
       label: "Shuffle",
       icon: <ShuffleIcon />,
-      onClick: () => setOrder("shuffle"),
+      onClick: () => setOrder("shuffle")  ,
     },
   ];
 
   function makeButton() {
+    
     let title;
     let icon;
     if (order == "sequence") {

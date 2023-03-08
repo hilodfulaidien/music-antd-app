@@ -6,7 +6,12 @@
         background: rgb(28, 28, 28);
         margin-bottom: 8px;
         display: flex;
-        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+
+        > *{
+            margin: 0 4px;
+        }
 
     }
 
@@ -14,6 +19,15 @@
         height: calc(100% - 36px);
         width: auto;
         overflow: hidden auto;
+
+        .ant-list-item:hover{
+            color: rgba(255, 255, 255,0.85);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+    }
+
+    .ant-segmented .anticon{
+        font-size: 16px;
     }
 
 }

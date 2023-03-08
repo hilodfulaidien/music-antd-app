@@ -1,10 +1,11 @@
 import "./AlbumPanel.scss";
 import imageDefault from "../assets/images/ironman.jpg";
-import { Card, List, Segmented } from "antd";
+import { List, Segmented } from "antd";
 import { GridViewIcon, ListViewIcon } from "../utils/Icons";
 import AlbumGridItem from "../components/AlbumGridViewItem";
 import AlbumListItem from "../components/AlbumListViewItem";
 import { useState } from "react";
+import SearchInput from "../components/SearchInput";
 type ViewType = "listview" | "gridview";
 
 export default function AlbumPanel() {
@@ -44,8 +45,8 @@ export default function AlbumPanel() {
   return (
     <div className="my-album-panel">
       <div className="my-album-panel-toolbar">
+        <SearchInput/>
         <Segmented
-          size="small"
           value={view}
           options={[
             {
