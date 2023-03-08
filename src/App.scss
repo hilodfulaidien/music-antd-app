@@ -1,12 +1,12 @@
 .my-app {
-    display: flex;
     height: 100%;
+    display: flex;
     flex-flow: column;
     
 
     .my-layout-content{
         background: hsl(193, 100%, 75%);
-        flex-grow: 1;
+        height: 100%;
     }
 
     .my-layout-footer{
