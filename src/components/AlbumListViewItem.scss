@@ -1,0 +1,31 @@
+.ant-list-item {
+    padding: 4px 0px;
+
+    .ant-list-item-meta {
+        align-items: center;
+
+
+        .ant-list-item-meta-avatar {
+            display: flex;
+
+            img {
+                height: 56px;
+            }
+        }
+
+        .ant-list-item-meta-title {
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .ant-list-item-meta-description {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

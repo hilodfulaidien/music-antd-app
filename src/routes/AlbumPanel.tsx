@@ -1,56 +1,43 @@
 import "./AlbumPanel.scss";
 import imageDefault from "../assets/images/ironman.jpg";
 import { Card, List, Segmented } from "antd";
-import VirtualList from "rc-virtual-list";
-import Meta from "antd/es/card/Meta";
 import { GridViewIcon, ListViewIcon } from "../utils/Icons";
+import AlbumGridItem from "../components/AlbumGridViewItem";
+import AlbumListItem from "../components/AlbumListViewItem";
+import { useState } from "react";
+type ViewType = "listview" | "gridview";
 
 export default function AlbumPanel() {
-  function makeCardItem(item: AlbumCardProps) {
-    let artistsString: string = "";
+  const [view, setView] = useState<ViewType>("gridview");
 
-    item.albumArtists.forEach((value, index) => {
-      if (index == 0) {
-        artistsString = value;
-      } else {
-        artistsString = artistsString + " , " + value;
-      }
-    });
-
+  function makeGridView() {
     return (
-      <List.Item
-        className="my-list-card-item"
-        title={item.albumName + "\n" + artistsString}
-      >
-        <Card cover={<img src={item.thumbnailUrl} />}>
-          <Meta title={item.albumName} description={artistsString} />
-        </Card>
-      </List.Item>
+      <List
+        grid={{ gutter: 16 }}
+        dataSource={albums}
+        renderItem={(item) => (
+          <AlbumGridItem
+            thumbnailUrl={item.thumbnailUrl}
+            albumName={item.albumName}
+            albumArtists={item.albumArtists}
+          />
+        )}
+      />
     );
   }
 
-  function makeNormalItem(item: AlbumCardProps) {
-    let artistsString: string = "";
-
-    item.albumArtists.forEach((value, index) => {
-      if (index == 0) {
-        artistsString = value;
-      } else {
-        artistsString = artistsString + " , " + value;
-      }
-    });
-
+  function makeListView() {
     return (
-      <List.Item
-        className="my-list-normal-item"
-        title={item.albumName + "\n" + artistsString}
-      >
-        <List.Item.Meta
-          avatar={<img src={item.thumbnailUrl} />}
-          title={item.albumName}
-          description={artistsString}
-        />
-      </List.Item>
+      <List
+        dataSource={albums}
+        renderItem={(item) => (
+          <AlbumListItem
+            thumbnailUrl={item.thumbnailUrl}
+            albumName={item.albumName}
+            albumArtists={item.albumArtists}
+          />
+        )}
+      />
     );
   }
 
@@ -59,20 +46,21 @@ export default function AlbumPanel() {
       <div className="my-album-panel-toolbar">
         <Segmented
           size="small"
+          value={view}
           options={[
             {
-              value: 1,
+              value: "listview",
               icon: <ListViewIcon />,
             },
             {
-              value: 2,
+              value: "gridview",
               icon: <GridViewIcon />,
             },
           ]}
+          onChange={(v) => setView(v as ViewType)}
         />
       </div>
-      {/* <List grid={{ gutter: 16 }} dataSource={albums} renderItem={(item) => makeCardItem(item)} /> */}
-      <List dataSource={albums} renderItem={(item) => makeNormalItem(item)} />
+      {view == "gridview" ? makeGridView() : makeListView()}
     </div>
   );
 }
