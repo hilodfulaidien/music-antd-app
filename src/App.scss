@@ -1,18 +1,21 @@
 .my-app {
     height: 100%;
-    display: flex;
-    flex-flow: column;
+    // display: flex;
+    // flex-flow: column;
+    position: relative;
     
 
     .my-layout-content{
         background: hsl(193, 100%, 75%);
-        height: 100%;
+        height: calc(100vh - 72px);
     }
 
-    .my-layout-footer{
-        background: hsl(193, 100%, 66%);
+    .my-layout-footer{  
+        position: absolute;
+        width: 100%;
         height: 72px;
-        
+        bottom: 0;
+        background: hsl(193, 100%, 66%);
     }
 
 }

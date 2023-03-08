@@ -1,22 +1,26 @@
-.ant-tabs{
+.ant-tabs {
     height: 100%;
     padding: 0px 8px 0px 8px;
     background: rgb(28, 28, 28);
 
-    .ant-tabs-tab{
+    .ant-tabs-nav {
+        margin: 0 0 8px 0;
+    }
+
+    .ant-tabs-tab {
         padding: 8px 0px 8px 0px;
-        
-         .anticon{
+
+        .anticon {
             margin-right: 8px;
         }
 
     }
 
-    // .ant-tabs-content{
-    //     height: 100%;
-    // }
+    .ant-tabs-content {
+        height: 100%;
+    }
 
-    // .ant-tabs-tabpane{
-    //     height: 100%;
-    // }
+    .ant-tabs-tabpane {
+        height: 100%;
+    }
 }

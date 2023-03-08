@@ -1,25 +1,23 @@
-.my-album {
+.my-album-panel {
     height: 100%;
 
-    .my-album-toolbar {
-        height: 36px;
-        background: white;
+    .my-album-panel-toolbar {
+        white-space: nowrap;
+        background: rgb(28, 28, 28);
+        margin-bottom: 8px;
+        display: flex;
+        flex-direction: row-reverse;
+
     }
 
-    // .ant-list{
-    //      display: flex;
-    //      height: 100%;
-    //      flex-flow: column;
-    // }
-    // .ant-spin-container {
+    .ant-list {
+        height: calc(100% - 36px);
+        width: auto;
+        overflow: hidden auto;
+    }
 
-    // }
-    // .ant-list-items {
-    //     width: 600px;
-    //     height: 100%;
-    //     overflow: auto;
 
-    // }
+
 
 
 

@@ -7,7 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Album from './routes/Album'
+import Album from './routes/AlbumPanel'
 import Artist from './routes/Artist'
 
 const { darkAlgorithm, compactAlgorithm } = theme;

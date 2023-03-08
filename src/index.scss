@@ -5,7 +5,8 @@ body {
   width: 100%;
   height: 100%;
   margin: 0px;
-   overflow: hidden;
+  scrollbar-width: thin;
+  overflow: hidden;
 
   // font-synthesis: none;
   // text-rendering: optimizeLegibility;
@@ -40,4 +41,8 @@ body {
   .my-volume-slider{
     height: 100px;
   }
+}
+
+::-webkit-scrollbar{
+  width: 12px;
 }

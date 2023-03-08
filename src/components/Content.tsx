@@ -1,5 +1,5 @@
 import { Tabs } from "antd";
-import Album from "../routes/Album";
+import Album from "../routes/AlbumPanel";
 import { AlbumIcon, PlayListIcon, UserIcon } from "../utils/Icons";
 import "./Content.scss";
 import MenuButton from "./MenuButton";
