@@ -2,8 +2,8 @@ import "./AlbumPanel.scss";
 import imageDefault from "../assets/images/ironman.jpg";
 import { List, Segmented } from "antd";
 import { GridViewIcon, ListViewIcon } from "../utils/Icons";
-import AlbumGridItem from "../components/AlbumGridViewItem";
-import AlbumListItem from "../components/AlbumListViewItem";
+import GridViewItem from "../components/GridViewItem";
+import ListViewItem from "../components/ListViewItem";
 import { useState } from "react";
 import SearchInput from "../components/SearchInput";
 type ViewType = "listview" | "gridview";
@@ -17,10 +17,10 @@ export default function AlbumPanel() {
         grid={{ gutter: 16 }}
         dataSource={albums}
         renderItem={(item) => (
-          <AlbumGridItem
+          <GridViewItem
             thumbnailUrl={item.thumbnailUrl}
-            albumName={item.albumName}
-            albumArtists={item.albumArtists}
+            name={item.name}
+            artists={item.artists}
           />
         )}
       />
@@ -32,10 +32,10 @@ export default function AlbumPanel() {
       <List
         dataSource={albums}
         renderItem={(item) => (
-          <AlbumListItem
+          <ListViewItem
             thumbnailUrl={item.thumbnailUrl}
-            albumName={item.albumName}
-            albumArtists={item.albumArtists}
+            name={item.name}
+            artists={item.artists}
           />
         )}
       />
@@ -45,7 +45,7 @@ export default function AlbumPanel() {
   return (
     <div className="my-album-panel">
       <div className="my-album-panel-toolbar">
-        <SearchInput/>
+        <SearchInput />
         <Segmented
           value={view}
           options={[
@@ -70,40 +70,39 @@ export default function AlbumPanel() {
 
 type AlbumCardProps = {
   thumbnailUrl: string;
-  albumName: string;
-  albumArtists: string[];
+  name: string;
+  artists: string[];
 };
 
 const albums: AlbumCardProps[] = [
   {
     thumbnailUrl: imageDefault,
-    albumName:
-      "album 1 nsdddsdsdqwewqrqwrqrqsdsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddde",
-    albumArtists: ["artist 1"],
+    name: "album 1 nsdddsdsdqwewqrqwrqrqsdsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddde",
+    artists: ["artist 1"],
   },
   {
     thumbnailUrl: imageDefault,
-    albumName: "album 1 nsdddsdsdqwewqrqwrqrqsdsddddde",
-    albumArtists: ["artist 1", "artist 2 sdddddddddddddddd"],
+    name: "album 1 nsdddsdsdqwewqrqwrqrqsdsddddde",
+    artists: ["artist 1", "artist 2 sdddddddddddddddd"],
   },
   {
     thumbnailUrl: imageDefault,
-    albumName: "album 1 nsdddsdsdqwewqrqwrqrqsdsddddde",
-    albumArtists: ["artist 1", "artist 2 sdddddddddddddddd"],
+    name: "album 1 nsdddsdsdqwewqrqwrqrqsdsddddde",
+    artists: ["artist 1", "artist 2 sdddddddddddddddd"],
   },
   {
     thumbnailUrl: imageDefault,
-    albumName: "album 1 nsdddsdsdqwewqrqwrqrqsdsddddde",
-    albumArtists: ["artist 1", "artist 2 sdddddddddddddddd"],
+    name: "album 1 nsdddsdsdqwewqrqwrqrqsdsddddde",
+    artists: ["artist 1", "artist 2 sdddddddddddddddd"],
   },
   {
     thumbnailUrl: imageDefault,
-    albumName: "album 1 nsdddsdsdqwewqrqwrqrqsdsddddde",
-    albumArtists: ["artist 1", "artist 2 sdddddddddddddddd"],
+    name: "album 1 nsdddsdsdqwewqrqwrqrqsdsddddde",
+    artists: ["artist 1", "artist 2 sdddddddddddddddd"],
   },
   {
     thumbnailUrl: imageDefault,
-    albumName: "album 1 nsdddsdsdqwewqrqwrqrqsdsddddde",
-    albumArtists: ["artist 1", "artist 2 sdddddddddddddddd"],
+    name: "album 1 nsdddsdsdqwewqrqwrqrqsdsddddde",
+    artists: ["artist 1", "artist 2 sdddddddddddddddd"],
   },
 ];

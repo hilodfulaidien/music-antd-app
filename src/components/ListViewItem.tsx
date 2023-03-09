@@ -1,20 +1,20 @@
 import { List } from "antd";
-import "./AlbumListViewItem.scss";
+import "./ListViewItem.scss";
 
-type AlbumListProps = {
+type ListViewItemProps = {
   thumbnailUrl: string;
-  albumName: string;
-  albumArtists: string[];
+  name: string;
+  artists: string[];
 };
 
-export default function AlbumListViewItem({
+export default function ListViewItem({
   thumbnailUrl,
-  albumName,
-  albumArtists,
-}: AlbumListProps) {
+  name,
+  artists,
+}: ListViewItemProps) {
   let artistsString: string = "";
 
-  albumArtists.forEach((value, index) => {
+  artists.forEach((value, index) => {
     if (index == 0) {
       artistsString = value;
     } else {
@@ -25,11 +25,11 @@ export default function AlbumListViewItem({
   return (
     <List.Item
       className="my-listview-item"
-      title={albumName + "\n" + artistsString}
+      title={name + "\n" + artistsString}
     >
       <List.Item.Meta
         avatar={<img src={thumbnailUrl} />}
-        title={albumName}
+        title={name}
         description={artistsString}
       />
     </List.Item>
