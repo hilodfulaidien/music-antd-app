@@ -1,5 +1,5 @@
 import { Tabs } from "antd";
-import Album from "../routes/AlbumPanel";
+import AlbumPanel from "../routes/AlbumPanel";
 import { AlbumIcon, PlayListIcon, UserIcon } from "../utils/Icons";
 import "./Content.scss";
 import MenuButton from "./MenuButton";
@@ -21,13 +21,13 @@ export default function Content() {
             </span>
           ),
           key: "1",
-          children: <Album />,
+          children: <AlbumPanel />,
         },
         {
           label: (
-            <span title="Artist">
+            <span title="Album Artist">
               <UserIcon />
-              Artist
+              Album Artist
             </span>
           ),
           key: "2",
