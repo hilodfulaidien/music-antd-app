@@ -49,11 +49,13 @@ export default function AlbumPanel() {
         <Segmented
           value={view}
           options={[
-            {
+            {             
               value: "listview",
-              icon: <ListViewIcon />,
+              label:(<span title='List View'><ListViewIcon /></span>)
+              
             },
             {
+              title:'Grid View',
               value: "gridview",
               icon: <GridViewIcon />,
             },
