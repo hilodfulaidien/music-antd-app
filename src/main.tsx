@@ -11,7 +11,7 @@ import Artist from './routes/ArtistPanel'
 import AlbumPanel from './routes/AlbumPanel'
 import ArtistPanel from './routes/ArtistPanel'
 
-const { darkAlgorithm, compactAlgorithm } = theme;
+const { darkAlgorithm} = theme;
 
 const router = createBrowserRouter([
   {
